@@ -49,8 +49,8 @@ For now there is only one entry point for framework execution: org.jazzteam.xml2
 * Inheritance rules are very simple: if attribute of child is not empty it will remain in child. **So, parent's attributes will be inherited only in case the same attributes wasn't filled by child.** 
 
 * There are special items could be in testcase -- containers (for example `<Frame>`, `<for>`, etc..). All of them are extends from `<ContainerType>` type in Routines.xsd. For them there are some special rules, related to elements inheritance. Only attributes of containers itself follow inheritance rules as usual in elements. For childs of containers (subelements) there are restrictions: 
-1. elements in container could have non empty `"extends"` attribute only if container doesn't have a parent. 
-2. Elements in containers which have parent could only "overrides" elements from parent container. It could be done by specifying of the same `"ref"` attribute like in element which should be "overriden".
+ 1. elements in container could have non empty `"extends"` attribute only if container doesn't have a parent. 
+ 2. Elements in containers which have parent could only "overrides" elements from parent container. It could be done by specifying of the same `"ref"` attribute like in element which should be "overriden".
 
 * elements inside containers must have unique ref only in this container. Other containers could reuse the same elements refs.
 
