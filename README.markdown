@@ -28,7 +28,7 @@ xml2Selenium                         : root project for handling projects-module
   mvn eclipse:eclipse
 ```
 
-For now there is only one entry point for framework execution: org.jazzteam.xml2selenium.core.ConsoleRunner.java. It contains main method witch takes parameters "*-f* <path_to_testcase_file>". To run\debug framework use "-f src/test/resources/examples/xml/basic/TestCase.xml".
+For now there is only one entry point for framework execution: org.jazzteam.xml2selenium.core.ConsoleRunner.java. It contains main method witch takes parameters "*-f* \<path_to_testcase_file\>". To run\debug framework use "-f src/test/resources/examples/xml/basic/TestCase.xml".
 
 # Test case basics.
 
