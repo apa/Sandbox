@@ -56,7 +56,7 @@ Check for examples in xml2Selenium-core/src/test/resources/examples/xml.
 
 
 # Architectrue.
-The base of framework is Routines.xsd. It contains hierarchical structures of abstract and real types\elements which reflects web-, custom-, special- elements in flow in future testcase. For now Routines.xsd doesn't contain all required types\and elements, but only basic ones (web elements like `\<Field>`, `\<Button>`, element for expanding with custom logic, "containers" -- `\<Frame>`, flow control -- `\<for>`, etc..). For sure in nearest future it will be expanded\refactored with new ones. Also naming of elements could be easily refactored as soon as we have new ideas about this. 
+The base of framework is Routines.xsd. It contains hierarchical structures of abstract and real types\elements which reflects web-, custom-, special- elements in flow in future testcase. For now Routines.xsd doesn't contain all required types\and elements, but only basic ones (web elements like `<Field>`, `<Button>`, element for expanding with custom logic, "containers" -- `<Frame>`, flow control -- `<for>`, etc..). For sure in nearest future it will be expanded\refactored with new ones. Also naming of elements could be easily refactored as soon as we have new ideas about this. 
 Based on this Routines.xsd JAXB generates classes (in xml2Selenium-core/target/generated-sources/xjc/). It's controlled by instructions which placed as in Routines.xsd (almost all for now), as in jaxbBindings.xjb.
 JAXB instructions related to inheritace injects generated classes into hierachy with manually created classes. See how it looks like:
 
