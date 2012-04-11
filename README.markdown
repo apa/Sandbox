@@ -32,7 +32,7 @@ For now there is only one entry point for framework execution: org.jazzteam.xml2
 
 # Test case basics.
 
-Check for examples in xml2Selenium-core/src/test/resources/examples/xml.
+###Check for examples in xml2Selenium-core/src/test/resources/examples/xml.
 
 * testcase is xml document with enclosed tag `<TestCase>`
 
