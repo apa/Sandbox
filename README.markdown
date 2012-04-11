@@ -67,7 +67,7 @@ manual   :   BaseElementTypeImpl     : implementation of automatic initializatio
 generated:    WebElementType         : introduces attributes which common for all web elements: id, tagName, cssSelector, xpath, etc..
 manual   :     WebElementTypeImpl    : implementation of functions basic for all web elements (based on tags appeared in parent)
 generated:      Input		     : Abstract class for all input elements.
-generated:       Button              : Class generated from non abstract `\<Button>` tag which could be used in testcases. Represents web element - button with all specific of this tag.
+generated:       Button              : Class generated from non abstract `<Button>` tag which could be used in testcases. Represents web element - button with all specific of this tag.
 manual   :        ButtonImpl         : Implementation of specific behavior of button.
 and so on..
 ```
