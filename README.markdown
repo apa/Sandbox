@@ -62,12 +62,12 @@ JAXB instructions related to inheritace injects generated classes into hierachy 
 
 ```
 manual   : ElementsParent            : something very basic for all types of elements in testcase -- scope, initialization
-generated:  BaseElementType          : introduces attributes `"ref"`, `"extends"`, `"action"`
+generated:  BaseElementType          : introduces attributes "ref", "extends", "action"
 manual   :   BaseElementTypeImpl     : implementation of automatic initialization of inheritance from parent beans
 generated:    WebElementType         : introduces attributes which common for all web elements: id, tagName, cssSelector, xpath, etc..
 manual   :     WebElementTypeImpl    : implementation of functions basic for all web elements (based on tags appeared in parent)
-generated:      Input		     : Abstract class for all input elements.
-generated:       Button              : Class generated from non abstract `<Button>` tag which could be used in testcases. Represents web element - button with all specific of this tag.
+generated:      Input                : Abstract class for all input elements.
+generated:       Button              : Class generated from non abstract \<Button> tag which could be used in testcases. Represents web element - button with all specific of this tag.
 manual   :        ButtonImpl         : Implementation of specific behavior of button.
 and so on..
 ```
