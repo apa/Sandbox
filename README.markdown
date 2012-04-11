@@ -34,21 +34,21 @@ For now there is only one entry point for framework execution: org.jazzteam.xml2
 
 Check for examples in xml2Selenium-core/src/test/resources/examples/xml.
 
-* testcase is xml document with enclosed tag `\<TestCase>`
+* testcase is xml document with enclosed tag `<TestCase>`
 
-* every testcase at least must be valid agaist schema (`\<xsi:schemaLocation="http://www.jazzteam.org/Routines Routines.xsd">`).
+* every testcase at least must be valid agaist schema (`<xsi:schemaLocation="http://www.jazzteam.org/Routines Routines.xsd">`).
 
-* could be 0 or more imports used in testcase (`\<import resource="src/test/resources/examples/xml/basic/CommonFrames.xml" name="appFrames">`). Imports makes items available in specified resource known in current testcase under specified name (think about names as about scopes).
+* could be 0 or more imports used in testcase (`<import resource="src/test/resources/examples/xml/basic/CommonFrames.xml" name="appFrames">`). Imports makes items available in specified resource known in current testcase under specified name (think about names as about scopes).
 
-* testcase could contain 1 or more `\<Test>` sections. 
+* testcase could contain 1 or more `<Test>` sections. 
 
-* every item under Test tag could contain `"ref"` attribute. It allows to referrence this item as in testcase as from outside. If element has no `"ref"` attribute or it's empty there is no possibility to use it as parent for other element. In one `\<Test>` or `\<Imports>` couldn't be more than one direct child element with the same `"ref"` (except case with empty or not specified ref).
+* every item under Test tag could contain `"ref"` attribute. It allows to referrence this item as in testcase as from outside. If element has no `"ref"` attribute or it's empty there is no possibility to use it as parent for other element. In one `<Test>` or `<Imports>` couldn't be more than one direct child element with the same `"ref"` (except case with empty or not specified ref).
 
-* every item under `\<Test>` tag could contain `"extends"` attribute. Value of this attribute could be `"importName:parentItemRef"` (if we referrence item from external resource), `":parentItemRef"` or `"parentItemRef"` if we are refference item from current testcase (..context, file. It's also true for elements in external resource, however they are not under `\<Test>` tag, but under `\<Imports>` tag). 
+* every item under `<Test>` tag could contain `"extends"` attribute. Value of this attribute could be `"importName:parentItemRef"` (if we referrence item from external resource), `":parentItemRef"` or `"parentItemRef"` if we are refference item from current testcase (..context, file. It's also true for elements in external resource, however they are not under `<Test>` tag, but under `<Imports>` tag). 
 
 * Inheritance rules are very simple: if attribute of child is not empty it will remain in child. **So, parent's attributes will be inherited only in case the same attributes wasn't filled by child.** 
 
-* There are special items could be in testcase -- containers (for example `\<Frame>`, `\<for>`, etc..). All of them are extends from `\<ContainerType>` type in Routines.xsd. For them there are some special rules, related to elements inheritance. Only attributes of containers itself follow inheritance rules as usual in elements. For childs of containers (subelements) there are restrictions: 
+* There are special items could be in testcase -- containers (for example `<Frame>`, `<for>`, etc..). All of them are extends from `<ContainerType>` type in Routines.xsd. For them there are some special rules, related to elements inheritance. Only attributes of containers itself follow inheritance rules as usual in elements. For childs of containers (subelements) there are restrictions: 
 1. elements in container could have non empty `"extends"` attribute only if container doesn't have a parent. 
 2. Elements in containers which have parent could only "overrides" elements from parent container. It could be done by specifying of the same `"ref"` attribute like in element which should be "overriden".
 
